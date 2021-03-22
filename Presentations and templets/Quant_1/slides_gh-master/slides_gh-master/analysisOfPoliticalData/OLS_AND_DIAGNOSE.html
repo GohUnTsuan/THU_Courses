@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>课堂报告：县级官员与“省管县”改革</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="吴温泉" />
+    <script src="OLS_AND_DIAGNOSE_files/header-attrs-2.5/header-attrs.js"></script>
+    <link href="OLS_AND_DIAGNOSE_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="zh-CN_custom.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 课堂报告：县级官员与“省管县”改革
+## ———基于能动者的研究路径
+### 吴温泉
+### 清华大学政治学系
+
+---
+
+
+
+
+
+
+
+## Overview
+
+1. 如何找到一只高CP值（Combat Point）的宝可梦？
+1. ols回归及诊断 
+.center[&lt;img src="images/screenshot.jpg" height = 400 /&gt;]
+
+---
+
+class: inverse, bottom
+
+# Data: Pokemon75
+### A key part of Pokémon Go is using evolutions to get stronger Pokémon, and a deeper understanding of evolutions is key to being the greatest Pokémon Go player of all time. This data set covers 75 Pokémon evolutions spread across four species. A wide set of variables are provided, allowing a deeper dive into what characteristics are important in predicting a Pokémon's final combat power (CP).
+
+---
+
+## Data: Pokemon75
+
+1. species: The Pokémon's type, e.g. Pidgey.
+1. cp: Pre-evolution Combat Power, which is a summary of the Pokémon's strength for battling prior to the evolution of the Pokémon.
+1. hp: Pre-evolution Hit Points, which is a summary of how difficult it is to weaken the Pokémon in a battle.
+1. weight: Pre-evolution weight, in kilograms.
+1. height: Pre-evolution height, in meters.
+1. cp_new: Post-evolution Combat Power.
+
+---
+
+## Data: Pokemon75
+### 数据集里的四个物种
+&lt;img src="images/Caterpie.jpg" height = 230 /&gt;
+&lt;img src="images/eevee.jpg" height = 230 /&gt;
+&lt;img src="images/pidgey.jpg" height = 230 /&gt;
+&lt;img src="images/weedle.jpg" height = 230 /&gt;
+
+---
+
+class: inverse, bottom
+
+# OLS Regression
+
+---
+
+## OLS Regression
+
+fit1 &lt;- lm(因变量 ~ 自变量) 
+
+
+---
+
+class: inverse, bottom
+
+# Diagnose: Gauss–Markov Theorem
+
+---
+
+## Diagnose: Gauss–Markov Theorem
+
+1. .navy[Linearity] in the parameter;
+1. .navy[Nonstochastic] X ("given X," a.k.a., "X is fixed");
+1. X has .navy[positive noninfinite] variance (var(X));
+1. Correct .navy[specification;]
+1. .red[Identification] (N &gt; K; K = 2 for a simple OLS);
+1. .red[Mean zero errors] (E(u&lt;sub&gt;i&lt;/sub&gt;|X&lt;sub&gt;i&lt;/sub&gt;) = 0);
+1. .red[Exogeneity]: No covariance between X&lt;sub&gt;i&lt;/sub&gt; and u&lt;sub&gt;i&lt;/sub&gt; (E(X&lt;sub&gt;i&lt;/sub&gt;u&lt;sub&gt;i&lt;/sub&gt;) = cov(x&lt;sub&gt;i&lt;/sub&gt;, u&lt;sub&gt;i&lt;/sub&gt;) =0);
+1. .red[No autocorrelation] (E(u&lt;sub&gt;i&lt;/sub&gt;, u&lt;sub&gt;j&lt;/sub&gt;|X&lt;sub&gt;i&lt;/sub&gt;, X&lt;sub&gt;j&lt;/sub&gt;) = cov(u&lt;sub&gt;i&lt;/sub&gt;, u&lt;sub&gt;j&lt;/sub&gt;|X&lt;sub&gt;i&lt;/sub&gt;, X&lt;sub&gt;j&lt;/sub&gt;) = 0, &amp;forall; i, j);
+1. .gray[Homoskedasticity] (constant variance of u&lt;sub&gt;i&lt;/sub&gt;, var(u&lt;sub&gt;i&lt;/sub&gt;|X) = &amp;sigma;&lt;sup&gt;2&lt;/sup&gt;);
+1. No .gray[perfect collinearity] (when there are more than one X, &amp;nexists; X&lt;sub&gt;i&lt;/sub&gt; s.t., X&lt;sub&gt;i&lt;/sub&gt; = a + b&amp;sum&lt;sub&gt;j = 1&lt;/sub&gt;b&lt;sub&gt;j&lt;/sub&gt;X&lt;sub&gt;j&lt;/sub&gt;)
+
+---
+
+
+## Reference
+
+- 感谢 齐桐萱的Codes
+- 感谢 Hung-yi Lee的Pokemon data
+- 感谢 Yue Hu的Slides
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

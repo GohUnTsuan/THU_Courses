@@ -1,0 +1,62 @@
+---
+title: "Slides"
+author: "Dr. Yue Hu"
+output: html_document
+---
+
+This website collects a selected list of the slides of my public speeches. 
+If you want to know more about me, welcome to my [personal page](https://sammo3182.github.io).
+
+此页面汇集了我部分公开发言的相关资料。
+如果您希望对其中某些研究有更深了解，请浏览我的[个人网页](https://sammo3182.github.io)查询更多内容或直接与我取得联系。    
+
+#### Class slides 课件
+
++ <a href="/slides_gh/slides/courses/analysisOfPoliticalData/index.html">Analysis of Political Data (70700173)</a>
++ <a href="/slides_gh/slides/courses/governmentalBigData/index.html">Big Data Analysis for Governance (80700673)</a>
++ <a href="/slides_gh/slides/courses/analysisOfPublicPolicy/index.html">Analysis of Public Policy: Perspectives and Methods (30700953)</a>
+
+#### Workshop 讲习班
+
++ [Dr Hu's R Workshop Series](slides/rWorkshop/)
++ <a href="/slides_gh/slides/mathCamp/mathcamp.html">Math Basics for Poli Sci Students</a>
++ <a href="/slides_gh/slides/teachingDemo/languagePolicy.html">Asian Politics: Language Policy</a>
++ <a href="/slides_gh/slides/teachingDemo/languagePolicy_cn.html">亚洲语言政策</a>
+<!-- + <a href="/slides_gh/slides/guestLecture/populistAuthoritarianism.html">Populist Authoritarianism: Political Culture in China</a> -->
+    
+#### Guest Lecture 讲座
+
+* <a href="/slides_gh/slides/guestLecture/intro2ScientificResearch.html">Introduction to Social Science Research</a>
+
+* <a href="/slides_gh/slides/guestLecture/authorityMarker_long.html"> Cultural Marker vs. Authority Marker</a> 
+
+* <a href="/slides_gh/slides/jobtalk/authorityMarker_cn.html"> 语言标记 vs. 权威标记: 语言态度如何影响过程信任</a> 
+
+* <a href="/slides_gh/slides/guestLecture/democracyDiscourse.html">中国政治语言中的民主概念</a>
+
+* <a href="/slides_gh/slides/guestLecture/experiment_s.html">实验政治学与实验室实验</a>
+
+* <a href="/slides_gh/slides/guestLecture/patriotic_bases.html">展览馆里的政治传播</a>
+
+* <a href="/slides_gh/slides/guestLecture/latentVariable.html">潜变量分析与诊断</a>
+
+#### Conference Presentation 会议
+
+* <a href="/slides_gh/slides/jobtalk/authorityMarker.html"> 2018 MPSA: Cultural Marker vs. Authority Marker</a> 
+
+* <a href="/slides_gh/slides/conference/2018-MPSA/proficiencyTrust.html">2018 MPSA: Rebuilding the Tower of Babel</a>
+
+* <a href="/slides_gh/slides/conference/2019-FT_Workshop/democracyDiscourse_en.html">2019 Fudan-Tsinghua Workshop: Strategic Communication</a>
+
+* <a href="/slides_gh/slides/conference/2019-ChinaR/dotwhisker-interplot.html">2019 R China Conference</a>
+
+* <a href="/slides_gh/slides/conference/2019-ACPS/migrant_language.html">2019 ACPS: Breaking through the Barrier</a>
+
+* <a href="/slides_gh/slides/conference/2019-ComputingSocialScience/migrant_hukou.html">2019 计算社会科学国际学术会议: How Does Governmental Policy Shape Migration Decisions?</a>
+
+* <a href="/slides_gh/slides/conference/2019-AdvancedPolitics_THU/languageGovernance.html"> 2019 第六届政治科学与方法: 新型城镇化中的语言治理</a>
+
+* <a href="/slides_gh/slides/conference/2020-XinruiForum/inequalityTrust.html"> 2020 第一届中国政治新锐研究研讨会: How Inequality Affects Political Trust: A Mediation Analysis</a>
+
+* <a href="/slides_gh/slides/conference/2020-CulturalPyschology/fandom.html"> 2020 中国心理学会文化心理学专业委员会学术年会: 青少年饭圈身份认同与公共参与
+</a>
